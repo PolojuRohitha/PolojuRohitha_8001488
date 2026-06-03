@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 6 - Arrays and Methods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .full-width {
+            grid-column: 1 / -1;
+        }
+        input, button, select {
+            padding: 8px 12px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            display: block;
+            width: 95%;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .card-details {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+        .music-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        .sports-card {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        .food-card {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+        .art-card {
+            background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+        }
+        .tech-card {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            color: #333;
+        }
+        .cards-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .message {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 3px;
+            text-align: center;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .filter-buttons button {
+            width: 48%;
+            margin: 0;
+            padding: 10px;
+        }
+        .count-badge {
+            display: inline-block;
+            background-color: #ff6b6b;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task 6 - Arrays and Methods</h1>
+    
+    <div class="container">
+        <div class="section">
+            <h2>Add New Event</h2>
+            <input type="text" id="eventName" placeholder="Event Name">
+            <select id="eventCategory">
+                <option value="">Select Category</option>
+                <option value="Music">Music</option>
+                <option value="Sports">Sports</option>
+                <option value="Food">Food</option>
+                <option value="Art">Art</option>
+                <option value="Tech">Tech</option>
+            </select>
+            <input type="date" id="eventDate" placeholder="Date">
+            <input type="number" id="eventSeats" placeholder="Available Seats">
+            <button onclick="addNewEvent()">Add Event</button>
+            <div id="addMessage"></div>
+        </div>
+        
+        <div class="section">
+            <h2>Filter & Display Events</h2>
+            <div class="filter-buttons">
+                <button onclick="displayAllEvents()">All Events</button>
+                <button onclick="filterMusicEvents()">Music Events Only</button>
+            </div>
+            <div id="filterMessage"></div>
+        </div>
+        
+        <div class="section full-width">
+            <h2>Event Display Cards</h2>
+            <div id="cardsContainer"></div>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>

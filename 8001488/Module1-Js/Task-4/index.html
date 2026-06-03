@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4 - Functions, Scope, Closures, Higher-Order Functions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .event {
+            background-color: #f9f9f9;
+            padding: 12px;
+            margin: 10px 0;
+            border-left: 4px solid #007bff;
+            border-radius: 3px;
+        }
+        input, button {
+            padding: 8px 12px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .message {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 3px;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .category-stats {
+            background-color: #e8f4f8;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task 4 - Functions, Scope, Closures, Higher-Order Functions</h1>
+    
+    <div class="container">
+        <div class="section">
+            <h2>Add New Event</h2>
+            <input type="text" id="eventName" placeholder="Event Name">
+            <input type="text" id="eventCategory" placeholder="Category (e.g., Sports, Music, Food)">
+            <input type="number" id="eventSeats" placeholder="Available Seats">
+            <button onclick="handleAddEvent()">Add Event</button>
+            <div id="addMessage"></div>
+        </div>
+        
+        <div class="section">
+            <h2>Register User</h2>
+            <input type="text" id="userName" placeholder="User Name">
+            <input type="number" id="registerEventId" placeholder="Event ID">
+            <button onclick="handleRegisterUser()">Register</button>
+            <div id="registerMessage"></div>
+        </div>
+        
+        <div class="section">
+            <h2>Filter Events by Category</h2>
+            <input type="text" id="filterCategory" placeholder="Enter Category">
+            <button onclick="handleFilterEvents()">Search</button>
+            <div id="filterResults"></div>
+        </div>
+        
+        <div class="section">
+            <h2>Category Statistics</h2>
+            <button onclick="displayCategoryStats()">Show Stats</button>
+            <div id="statsContainer"></div>
+        </div>
+    </div>
+    
+    <div class="section" style="margin-top: 20px;">
+        <h2>All Events</h2>
+        <div id="allEvents"></div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>

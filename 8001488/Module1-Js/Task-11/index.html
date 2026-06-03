@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 11 - Working with Forms</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #102a43;
+        }
+        .form-card {
+            width: 100%;
+            max-width: 520px;
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 20px 50px rgba(16, 42, 67, 0.15);
+            padding: 32px;
+        }
+        .form-card h1 {
+            margin: 0 0 12px;
+            font-size: 24px;
+        }
+        .form-card p {
+            margin: 0 0 24px;
+            color: #475569;
+            line-height: 1.6;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        input,
+        select,
+        button {
+            width: 100%;
+            padding: 12px 14px;
+            border-radius: 12px;
+            border: 1px solid #cbd5e1;
+            font-size: 14px;
+            outline: none;
+        }
+        input:focus,
+        select:focus {
+            border-color: #7c3aed;
+            box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.12);
+        }
+        .error {
+            margin-top: 6px;
+            color: #b91c1c;
+            font-size: 13px;
+        }
+        button {
+            cursor: pointer;
+            background: #7c3aed;
+            color: white;
+            font-weight: 700;
+            border: none;
+            transition: transform 0.15s ease;
+        }
+        button:hover {
+            transform: translateY(-1px);
+        }
+        .success-message {
+            margin-top: 20px;
+            padding: 16px;
+            border-radius: 14px;
+            background: #ecfdf5;
+            color: #0f766e;
+            border: 1px solid #6ee7b7;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-card">
+        <h1>Event Registration</h1>
+        <p>Sign up for an upcoming community event. Provide your name, valid email, and select an event to join.</p>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Enter your full name">
+                <div id="nameError" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="Enter your email address">
+                <div id="emailError" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label for="eventSelect">Select Event</label>
+                <select id="eventSelect" name="eventSelect">
+                    <option value="">Choose an event</option>
+                    <option value="Jazz Night">Jazz Night</option>
+                    <option value="Food Festival">Food Festival</option>
+                    <option value="Art Workshop">Art Workshop</option>
+                    <option value="Tech Meetup">Tech Meetup</option>
+                </select>
+                <div id="eventError" class="error"></div>
+            </div>
+            <button type="submit">Register</button>
+            <div id="successMessage" class="success-message" style="display:none;"></div>
+        </form>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
