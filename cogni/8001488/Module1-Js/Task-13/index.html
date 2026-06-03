@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 13 - Debugging and Testing</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1d4ed8);
+            color: #f8fafc;
+        }
+        .card {
+            width: 100%;
+            max-width: 520px;
+            background: rgba(15,23,42,0.96);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+        }
+        h1 {
+            margin: 0 0 12px;
+            font-size: 26px;
+        }
+        p {
+            margin: 0 0 24px;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+        .field {
+            margin-bottom: 18px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 14px;
+            border: 1px solid rgba(148,163,184,0.4);
+            background: rgba(15,23,42,0.9);
+            color: #e2e8f0;
+            font-size: 14px;
+        }
+        button {
+            margin-top: 10px;
+            background: #2563eb;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.15s ease;
+        }
+        button:hover {
+            transform: translateY(-1px);
+        }
+        .message {
+            margin-top: 18px;
+            padding: 16px;
+            border-radius: 14px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(148,163,184,0.4);
+            color: #f8fafc;
+        }
+        .message.error {
+            border-color: #f87171;
+            background: rgba(248,113,113,0.15);
+        }
+        .message.success {
+            border-color: #34d399;
+            background: rgba(52,211,153,0.12);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Debug Registration</h1>
+        <p>Submit the form and open Chrome DevTools to inspect requests, variables, and the Fetch payload.</p>
+        <form id="debugForm">
+            <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Enter name">
+            </div>
+            <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="Enter email">
+            </div>
+            <div class="field">
+                <label for="eventSelect">Event</label>
+                <select id="eventSelect" name="eventSelect">
+                    <option value="">Select event</option>
+                    <option value="Jazz Night">Jazz Night</option>
+                    <option value="Tech Talk">Tech Talk</option>
+                    <option value="Community Lunch">Community Lunch</option>
+                </select>
+            </div>
+            <button type="submit">Submit Registration</button>
+        </form>
+        <div id="statusMessage" class="message" style="display:none;"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

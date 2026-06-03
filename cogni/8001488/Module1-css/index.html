@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Practice</title>
+    <style>
+        .internal {
+            color:#217710;
+            background-color:lightyellow;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Task1-Different types of styling</h1>
+    <h3>1.Inline CSS</h3>
+    <p style="color:red;">Welcome to Local Community Event Portal.</p>
+    <h3>2.Internal CSS</h3>
+    <p class="internal">Welcome to Local Community Event Portal.</p>
+    <h3>3.External CSS</h3>
+    <p class="external">Welcome to Local Community Event Portal.</p>
+
+<br><br><br><br>
+    <h1>Task2-CSS Syntax and Comments</h1>
+    <h2>This is sample Syntax.</h2>
+    <p class="check">This is our team.</p>
+    <button class="cta-button">Click Me</button>
+    
+<br><br><br><br>
+    <h1>Task3-Selectors</h1>
+    <div id="mainHeader">
+        <h1>Welcome to Local Community Event Portal.</h1>
+    </div>
+    <h2>Upcoming Events</h2>
+    <div class="event">
+        <h3>Musical Fest</h3>
+        <p>Enjoy live music performances</p>
+
+    </div>
+    <div class="event">
+        <h3>Dance Performance</h3>
+        <p>Enjoy live dance performances</p>
+        
+    </div>
+
+<br><br><br><br>
+    <h1>Task4-Color & Background Styling </h1>
+    <div class="task4-section">
+        <div class="section1">
+            <h2>Local Community Event Portal</h2>
+        </div>
+        <p class="para-text">Welcome to the Local Community Event Portal!</p>
+    </div>
+<br><br><br><br>
+    <h1>Task5-Typography: Fonts and Text </h1>
+    <div class="typography-section">
+        <h2 class="main-title">
+            Local Community Event Portal
+        </h2>
+        <h3 class="sub-title">
+            Celebrate Community Together
+        </h3>
+        <p class="description">
+            Welcome to the Local Community Event Portal.
+        </p>
+    </div>
+
+<br><br><br><br>
+
+    <h1>Task6 - Link and List Styling</h1>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to Local Community Event Portal</h2>
+        <p>Discover and participate in exciting local events!</p>
+    </section>
+
+    <section id="events" class="event-list">
+        <h2>Upcoming Community Events</h2>
+
+        <ul>
+            <li>Dance Competition</li>
+            <li>Local Food Festival</li>
+            <li>Music Night</li>
+            <li>Charity Marathon</li>
+        </ul>
+    </section>
+    <section id="gallery">
+        <h2>Event Gallery</h2>
+        <p>Check out photos from our recent events!</p>
+        <img src="food-festival.jpg" alt="Food Festival" class="gallery-image">
+        <img src="music-concert.jpg" alt="Music Night" class="gallery-image">
+        <img src="dancing.jpg" alt="Dancing Competition" class="gallery-image">
+        <img src="charity-run.jpg" alt="Charity Marathon" class="gallery-image">
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: communityportal@gmail.com</p>
+        <p>Phone: 9876543210</p>
+    </section>
+
+<br><br><br><br>
+    <h1>Task7-Table Styling</h1>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Event Name</th>
+                <th>Date</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Music Night</td>
+                <td>2024-07-15</td>
+                <td>Community Hall</td>
+            </tr>
+            <tr>
+                <td>Food Festival</td>
+                <td>2024-08-20</td>
+                <td>Main Square</td>
+            </tr>
+            <tr>
+                <td>Dance Competition</td>
+                <td>2024-09-10</td>
+                <td>City Park</td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br><br><br>
+        <h1>Task8-Box Model and Layout</h1>
+        <div class="eventCard">
+            <h2>Music Night</h2>
+            <p>Date: 2024-07-15</p>
+            <p>Location: Community Hall</p>
+        </div>    
+        <form>
+            <h2>Register for Event</h2>
+            <input type="text" placeholder="Name" class="input-field"><br>
+            <input type="email" placeholder="Email" class="input-field"><br>
+            <input type="tel" placeholder="Phone" class="input-field"><br>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+        <div class="hidden-box">
+            This box is hidden by default.
+        </div>
+        <div class="none-box">
+            This box is not displayed at all.
+        </div>
+<br><br><br><br>
+<h1>Task9-Multiple Columns in Text </h1>
+        <section class="news-article">
+
+    <h2>Community Bulletin</h2>
+
+    <p>
+        The <b>Dance Competition</b> will be held at the Community Hall this weekend. 
+        Participants from different local groups are preparing exciting performances 
+        to entertain the audience and celebrate community talent.
+    </p>
+
+    <p>
+        The <b>Food Festival</b> will feature a variety of traditional and modern dishes 
+        prepared by local chefs and food stalls. Visitors can enjoy delicious meals, 
+        snacks, and desserts with family and friends.
+    </p>
+
+    <p>
+        The <b>Music Night</b> is one of the most awaited events of the season. 
+        Local bands and singers will perform live music, creating a fun and energetic 
+        atmosphere for everyone attending the event.
+    </p>
+
+    <p>
+        The <b>Charity Marathon</b> aims to encourage fitness and support social causes. 
+        Community members of all ages are invited to participate and contribute to 
+        fundraising activities that help people in need.
+    </p>
+
+</section>
+<br><br><br><br>
+<h1>Task10-Responsive Design</h1>
+<h2>Local Community Event Portal</h2>
+
+    <div class="container">
+
+        <div class="event-card">
+            <img src="dancing.jpg" alt="Dance Competition">
+            <h2>Dance Competition</h2>
+            <p>Enjoy exciting dance performances by local talent.</p>
+        </div>
+
+        <div class="event-card">
+            <img src="food-festival.jpg" alt="Food Festival">
+            <h2>Local Food Festival</h2>
+            <p>Explore delicious dishes and cultural food stalls.</p>
+        </div>
+
+        <div class="event-card">
+            <img src="music-concert.jpg" alt="Music Night">
+            <h2>Music Night</h2>
+            <p>Experience live music performances and entertainment.</p>
+        </div>
+
+        <div class="event-card">
+            <img src="charity-run.jpg" alt="Charity Marathon">
+            <h2>Charity Marathon</h2>
+            <p>Participate in a marathon supporting social causes.</p>
+        </div>
+    </div>
+<h1>Task11- Debug and Test with Dev Tools and VS Code</h1>
+    <div class="debug-section">
+        <h2>Debugging Practice</h2>
+        <p>Use browser developer tools to inspect and debug this section.</p>
+        <button class="debug-button">Debug Me</button>
+    </div>
+</body>
+</html>
